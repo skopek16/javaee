@@ -1,1 +1,0 @@
-Program wypisujący "Hello World"
