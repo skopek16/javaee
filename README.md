@@ -1,1 +1,1 @@
-# javaee
+Bartłomiej Skopiński
