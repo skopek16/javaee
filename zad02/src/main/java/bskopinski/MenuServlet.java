@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 @WebServlet("/menu")
-public class menu extends HttpServlet {
+public class MenuServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

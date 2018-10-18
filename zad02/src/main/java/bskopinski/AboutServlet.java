@@ -7,8 +7,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet("/date")
-public class date extends HttpServlet {
+@WebServlet("/about")
+public class AboutServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -16,6 +16,6 @@ public class date extends HttpServlet {
 
         PrintWriter out = response.getWriter();
 
-        out.println("<html><body><h1>Date: " + new java.util.Date() + "</h1></body></html>");
+        out.println("<html><body><h1>Hi, I'm Bartek.</h1></body></html>");
     }
 }
