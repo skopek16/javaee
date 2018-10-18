@@ -2,18 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0863ba26-9cc4-4555-9be0-c6a17d2edfdb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/zad02/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zad02/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zad02/src/main/java/HelloServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zad02/src/main/java/about.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zad02/src/main/java/date.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zad02/src/main/java/menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zad02" beforeDir="false" afterPath="$PROJECT_DIR$/zad02" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zad02/src/main/java/com/example/servletjspdemo/domain/Person.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zad02/src/main/java/com/example/servletjspdemo/service/StorageService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zad02/src/main/java/com/example/servletjspdemo/web/DataServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zad02/src/main/java/com/example/servletjspdemo/web/FormServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zad02/src/main/java/com/example/servletjspdemo/web/GreetingServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zad02/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zad02/src/main/webapp/addPerson.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zad02/src/main/webapp/getPersonData.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zad02/src/main/webapp/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zad02/src/main/webapp/showAllPersons.jsp" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,6 +29,7 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="classpath" value="1" />
+          <entry key="gitignore" value="1" />
           <entry key="java" value="5" />
         </counts>
       </usages-collector>
@@ -41,16 +37,19 @@
         <counts>
           <entry key="Eclipse" value="1" />
           <entry key="JAVA" value="5" />
+          <entry key="PLAIN_TEXT" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="115" />
+          <entry key="gitignore" value="26" />
+          <entry key="java" value="119" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="115" />
+          <entry key="JAVA" value="119" />
+          <entry key="PLAIN_TEXT" value="26" />
         </counts>
       </usages-collector>
     </session>
@@ -80,11 +79,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/zad02/src/main/java/menu.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="270">
-              <caret line="18" column="113" selection-start-line="18" selection-start-column="113" selection-end-line="18" selection-end-column="113" />
+              <caret line="18" column="131" selection-start-line="18" selection-start-column="131" selection-end-line="18" selection-end-column="131" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="26" column="3" selection-start-line="26" selection-start-column="3" selection-end-line="26" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -92,7 +100,7 @@
     </leaf>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/zad02" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -100,6 +108,7 @@
         <option value="$PROJECT_DIR$/zad02/src/main/java/about.java" />
         <option value="$PROJECT_DIR$/zad02/src/main/java/date.java" />
         <option value="$PROJECT_DIR$/zad02/src/main/java/menu.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -165,7 +174,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539849225029" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539851936271" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -193,12 +202,12 @@
       <option name="presentableId" value="Default" />
       <updated>1539847914625</updated>
       <workItem from="1539847915915" duration="234000" />
-      <workItem from="1539848386047" duration="818000" />
+      <workItem from="1539848386047" duration="1613000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1052000" />
+    <option name="totallyTimeSpent" value="1847000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="293" y="53" width="1390" height="1000" extended-state="0" />
@@ -267,7 +276,14 @@
     <entry file="file://$PROJECT_DIR$/zad02/src/main/java/menu.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
-          <caret line="18" column="113" selection-start-line="18" selection-start-column="113" selection-end-line="18" selection-end-column="113" />
+          <caret line="18" column="131" selection-start-line="18" selection-start-column="131" selection-end-line="18" selection-end-column="131" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="3" selection-start-line="26" selection-start-column="3" selection-end-line="26" selection-end-column="3" />
         </state>
       </provider>
     </entry>
