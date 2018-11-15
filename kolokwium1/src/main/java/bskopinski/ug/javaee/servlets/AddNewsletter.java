@@ -31,15 +31,18 @@ public class AddNewsletter extends HttpServlet {
         NewsRepository repository = (NewsRepository) getServletContext().getAttribute("newsRepo");
 
         Date dataOd = Date.parse(httpServletRequest.getParameter("dataOd"));
+
+        Date dataDo = Date.parse(httpServletRequest.getParameter("dataDo"));
         NewsLetter newNewsLetter = new NewsLetter(
 
                 httpServletRequest.getParameter("name"),
 
                 dataOd,
+                dataDo,
 
-                httpServletRequest.getParameter("dataDo"),
+                httpServletRequest.getParameter("czestotliwosc"),
 
-                httpServletRequest.getParameter("name")
+                httpServletRequest.getParameter("tematyka")
                 );
 
 
