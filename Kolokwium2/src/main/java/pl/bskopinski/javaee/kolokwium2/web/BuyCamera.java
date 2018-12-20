@@ -33,7 +33,7 @@ public class BuyCamera extends HttpServlet {
             Camera a = iter.next();
             if (a.getName().equals(name)) {
 
-                out.append("<p>Kupiłeś:</p>");
+                out.append("<p>Kupiles:</p>");
                 out.append("<p>Nazwa: " + a.getName() + "</p>");
                     out.append("<p>Data: " + a.getDate() + "</p>");
 

@@ -44,36 +44,9 @@ public class addCamer extends HttpServlet {
             extrasSelected += subject + " ";
         }
 
-        if (session.getAttribute("sess_news") == null) {
             sCamera = new Camera(name, date,  frequency, extrasSelected);
             ns.addCamera(sCamera);
-        } else {
-//                sCamera = (Camera) session.getAttribute("sess_news");
-//                ns.removeNewsletter(sCamera);
-
-
-            sCamera = new Camera(name, date, frequency, extrasSelected);
-
-                for (Iterator<Camera> iter = allCameras.listIterator(); iter.hasNext(); ) {
-                    Camera a = iter.next();
-                    if (a.getName().equals(name)) {
-
-                        ((ListIterator<Camera>) iter).set(sCamera);
-                        cheack=1;
-                    }
-
-                }
-                if(cheack==0){
-                    sCamera = new Camera(name, date,frequency, extrasSelected);
-                    ns.addCamera(sCamera);
-                }
-
-            }
-//
-
-
-        session.setAttribute("sess_news", sCamera);
-
+       
         response.sendRedirect("cameras");
     }
 

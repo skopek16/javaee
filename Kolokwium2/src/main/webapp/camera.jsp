@@ -14,7 +14,7 @@
     <label for="name">Nazwa:</label>
     <input type="text" name="name" id="name" required="required"><br>
 
-    <label for="date">Od daty:</label>
+    <label for="date">Data Produkcji:</label>
     <input type="text" name="date" id="date" required="required" ><br>
 
 
