@@ -1,18 +1,19 @@
 package bskopinski.ug.javaee.bean;
 
 
+import java.time.LocalDate;
 import java.util.Date;
 
 public class NewsLetter {
 
     private String name;
-    private Date dataOd;
-    private Date dataDo;
+    private LocalDate dataOd;
+    private LocalDate dataDo;
     private String czestotliwosc;
 
     private String tematyka;
 
-    public NewsLetter(String name, Date dataOd, Date dataDo, String czestotliwosc, String tematyka) {
+    public NewsLetter(String name, LocalDate dataOd, LocalDate dataDo, String czestotliwosc, String tematyka) {
         this.name = name;
         this.dataOd = dataOd;
         this.dataDo = dataDo;
@@ -28,19 +29,19 @@ public class NewsLetter {
         this.name = name;
     }
 
-    public Date getDataOd() {
+    public LocalDate getDataOd() {
         return dataOd;
     }
 
-    public void setDataOd(Date dataOd) {
+    public void setDataOd(LocalDate dataOd) {
         this.dataOd = dataOd;
     }
 
-    public Date getDataDo() {
+    public LocalDate getDataDo() {
         return dataDo;
     }
 
-    public void setDataDo(Date dataDo) {
+    public void setDataDo(LocalDate dataDo) {
         this.dataDo = dataDo;
     }
 

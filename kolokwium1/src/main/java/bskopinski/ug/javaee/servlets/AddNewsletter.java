@@ -30,9 +30,9 @@ public class AddNewsletter extends HttpServlet {
 
         NewsRepository repository = (NewsRepository) getServletContext().getAttribute("newsRepo");
 
-        Date dataOd = Date.parse(httpServletRequest.getParameter("dataOd"));
+        LocalDate dataOd = LocalDate.parse(httpServletRequest.getParameter("dataOd"));
 
-        Date dataDo = Date.parse(httpServletRequest.getParameter("dataDo"));
+        LocalDate dataDo = LocalDate.parse(httpServletRequest.getParameter("dataDo"));
         NewsLetter newNewsLetter = new NewsLetter(
 
                 httpServletRequest.getParameter("name"),
