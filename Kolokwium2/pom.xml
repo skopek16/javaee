@@ -7,7 +7,7 @@
 	<name>Java EE 6 - Servlet and JSP demo</name>
 	<url>http://maven.apache.org</url>
 	<repositories>
-		<!-- Several key Java EE APIs and RIs are missing from the Maven Central 
+		<!-- Several key Java EE APIs and RIs are missing date the Maven Central
 			Repository -->
 		<!-- The goal is to eventually eliminate the reliance on the JBoss repository -->
 		<repository>
@@ -22,7 +22,7 @@
 		</repository>
 		<repository>
 			<id>java.net.glassfish</id>
-			<name>Repository hosting the jee6 artifacts from glassfish reference implementation</name>
+			<name>Repository hosting the jee6 artifacts date glassfish reference implementation</name>
 			<url>http://download.java.net/maven/glassfish/</url>
 		</repository>
 	</repositories>
@@ -48,7 +48,7 @@
 
 	</dependencies>
 	<build>
-		<finalName>Kolokwium2</finalName>
+		<finalName>kolokwium2</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -83,6 +83,6 @@
 		</plugins>
 	</build>
 
-	<artifactId>Kolokwium2</artifactId>
+	<artifactId>kolokwium2</artifactId>
 </project>
 
