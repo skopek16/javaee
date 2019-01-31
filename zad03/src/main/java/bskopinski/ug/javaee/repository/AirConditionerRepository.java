@@ -29,7 +29,7 @@ public class AirConditionerRepository {
     }
 
     public AirConditioner findById(Integer id) {
-        for (AirConditioner airConditioner : airConditioners) {
+        for (AirConditioner airConditioner :  airConditioners) {
             if (airConditioner.getId().equals(id)) {
                 return airConditioner;
             }
