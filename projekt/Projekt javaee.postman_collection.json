@@ -128,7 +128,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"model\": \"HRX-1000\",\n\t\"produceDate\": \"2018-01-01\",\n\t\"capacity\": 2.5,\n\t\"fans\": 5,\n\t\"producer\": {\n\t\t\"name\": \"Yamaha\"\n\t}\n}"
+					"raw": "{\n\t\"model\": \"HRX-1000\",\n\t\"produceDate\": \"2018-01-01\",\n\t\"capacity\": 2.5,\n\t\"fans\": 5,\n\t\"producer\": {\n\t\t\"name\": \"Sony\"\n\t}\n}"
 				},
 				"url": {
 					"raw": "http://localhost:8080/projekt/api/conditioner",
@@ -368,6 +368,259 @@
 						"api",
 						"producer",
 						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete All Condtioners",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/projekt/api/conditioner",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"projekt",
+						"api",
+						"conditioner"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Conditioner By Capacity",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/projekt/api/conditioner/3.0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"projekt",
+						"api",
+						"conditioner",
+						"3.0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Model Smoke Test",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/projekt/api/model/test",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"projekt",
+						"api",
+						"model",
+						"test"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Models",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/projekt/api/model",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"projekt",
+						"api",
+						"model"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Model",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/projekt/api/model/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"projekt",
+						"api",
+						"model",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Model",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"testModel\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/projekt/api/model",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"projekt",
+						"api",
+						"model"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Model",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"testNameChanged\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/projekt/api/model/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"projekt",
+						"api",
+						"model",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Model",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/projekt/api/model/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"projekt",
+						"api",
+						"model",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Conditioner By Model Name",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/projekt/api/conditioner/model/testNameChanged",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"projekt",
+						"api",
+						"conditioner",
+						"model",
+						"testNameChanged"
 					]
 				}
 			},
