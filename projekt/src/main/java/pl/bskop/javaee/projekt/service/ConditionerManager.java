@@ -3,6 +3,7 @@ package pl.bskop.javaee.projekt.service;
 import pl.bskop.javaee.projekt.domain.Conditioner;
 
 import javax.ejb.Stateless;
+import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import java.util.List;
@@ -12,6 +13,12 @@ public class ConditionerManager {
 
     @PersistenceContext
     EntityManager entityManager;
+    @Inject
+    ConditionerManager conditionerManager;
+    @Inject
+    ModelManager modelManager;
+    @Inject
+    ProducerManager producerManager;
 
     public void addConditioner(Conditioner conditioner) {
         entityManager.persist(conditioner);
@@ -43,5 +50,26 @@ public class ConditionerManager {
     }
     public Conditioner getConditionerByModelName(String modelName){
         return  (Conditioner) entityManager.createNamedQuery("conditioner.byModelName").setParameter("name",modelName).getSingleResult();
+    }
+    public void addConditionerWithProducer(Conditioner conditioner,int prodID){
+
+        conditioner.setProducer(producerManager.getProducer(prodID));
+        entityManager.persist(conditioner);
+    }
+    public int addConditionerWithModel(Conditioner conditioner,int modelId){
+        List<Conditioner> conditioners = conditionerManager.getAllConditioners();
+int flag=0;
+        for (Conditioner conditioner2: conditioners) {
+            if (conditioner2.getModel().getId() == modelId){
+               flag=1;
+               return flag;
+
+            }
+        }
+
+
+        conditioner.setModel(modelManager.getModel(modelId));
+        entityManager.persist(conditioner);
+        return flag;
     }
 }

@@ -56,6 +56,28 @@ public class ConditionerRestService {
         return Response.status(Response.Status.CREATED).build();
     }
 
+    @POST
+    @Path("/model/{modelID}")
+    @Consumes(MediaType.APPLICATION_JSON)
+    public Response addConditionerWithModel(@PathParam("modelID") int  modelID,Conditioner conditioner) {
+        int flag=0;
+        flag = conditionerManager.addConditionerWithModel(conditioner,modelID);
+        if(flag==1){ return  Response.status(403).type("text/plain").entity("model already in used").build();}
+
+        return Response.status(Response.Status.CREATED).build();
+    }
+
+
+    @POST
+    @Path("/producer/{prodID}")
+    @Consumes(MediaType.APPLICATION_JSON)
+    public Response addConditionerWithProducer(@PathParam("prodID") int  prodID,Conditioner conditioner) {
+
+      conditionerManager.addConditionerWithProducer(conditioner,prodID);
+
+        return Response.status(Response.Status.CREATED).build();
+    }
+
     @PUT
     @Path("/{conditionerId}")
     @Consumes(MediaType.APPLICATION_JSON)

@@ -515,7 +515,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"name\": \"testModel\"\n}"
+					"raw": "{\n    \"name\": \"newtest\"\n}"
 				},
 				"url": {
 					"raw": "http://localhost:8080/projekt/api/model",
@@ -621,6 +621,74 @@
 						"conditioner",
 						"model",
 						"testNameChanged"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Conditioner With Model",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\n\t\"produceDate\": \"2013-01-01\",\n\t\"capacity\":2.0,\n\t\"fans\": 2,\n\t\"producer\":\"test4\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/projekt/api/conditioner/model/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"projekt",
+						"api",
+						"conditioner",
+						"model",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Conditioner with Producer",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"model\": {\n\t\t\"name\":\"model6\"\n\t},\n\t\"produceDate\": \"2018-01-01\",\n\t\"capacity\": 4.0,\n\t\"fans\": 3\n\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/projekt/api/conditioner/producer/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"projekt",
+						"api",
+						"conditioner",
+						"producer",
+						"2"
 					]
 				}
 			},
