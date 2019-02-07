@@ -36,7 +36,7 @@ public class ConditionerRestService {
     @GET
     @Path("/{capacity}")
     @Produces(MediaType.APPLICATION_JSON)
-    public Conditioner getConditionerByProducer(@PathParam("capacity") double  capacity) {
+    public List<Conditioner> getConditionerByProducer(@PathParam("capacity") double  capacity) {
         return conditionerManager.getConditionerByCapacity(capacity);
     }
     @POST
