@@ -54,13 +54,19 @@ public class ConditionerRestService {
 
         return Response.status(Response.Status.OK).build();
     }
+    @DELETE
+    @Path("/")
+    public Response deleteAllCondtioners(){
+        conditionerManager.deleteAllConditioners();
+
+        return Response.status(Response.Status.OK).build();
+    }
 
     @DELETE
     @Path("/{conditionerId}")
     @Produces(MediaType.APPLICATION_JSON)
     public Response deleteConditioner(@PathParam("conditionerId") int id) {
         conditionerManager.deleteConditioner(id);
-
         return Response.status(Response.Status.OK).build();
     }
 

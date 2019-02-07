@@ -6,7 +6,11 @@ import java.util.Date;
 
 @Entity
 @XmlRootElement
-@NamedQuery(name = "conditioner.getAll", query = "Select c from Conditioner c")
+
+@NamedQueries({
+        @NamedQuery(name = "conditioner.getAll", query = "Select c from Conditioner c"),
+        @NamedQuery(name = "conditioner.deleteAll", query = "Delete  from Conditioner"),
+})
 public class Conditioner {
 
     private long id;

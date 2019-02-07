@@ -35,4 +35,7 @@ public class ConditionerManager {
     public List<Conditioner> getAllConditioners(){
         return entityManager.createNamedQuery("conditioner.getAll").getResultList();
     }
+    public void deleteAllConditioners(){
+        entityManager.createNamedQuery("conditioner.deleteAll").executeUpdate();
+    }
 }
