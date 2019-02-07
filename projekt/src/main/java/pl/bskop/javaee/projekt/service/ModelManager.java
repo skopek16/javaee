@@ -13,7 +13,8 @@ import java.util.List;
 public class ModelManager {
     @PersistenceContext
     EntityManager entityManager;
-
+    @Inject
+    ConditionerManager conditionerManager;
 
     public void addModel(Model producer) {
         entityManager.persist(producer);
@@ -28,7 +29,13 @@ public class ModelManager {
     }
     public void deleteModel(int id){
         Model model = entityManager.find(Model.class, id);
-        
+        List<Conditioner> conditioners = conditionerManager.getAllConditioners();
+
+        for (Conditioner conditioner: conditioners) {
+            if (conditioner.getModel().getId() == model.getId()){
+                conditioner.setModel(null);
+            }
+        }
 
         entityManager.remove(model);
     }
