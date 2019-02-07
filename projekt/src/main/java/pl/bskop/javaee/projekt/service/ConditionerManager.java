@@ -38,4 +38,7 @@ public class ConditionerManager {
     public void deleteAllConditioners(){
         entityManager.createNamedQuery("conditioner.deleteAll").executeUpdate();
     }
+    public Conditioner getConditionerByCapacity(double capacity){
+        return (Conditioner) entityManager.createNamedQuery("conditioner.byCapacity").setParameter("capacity", capacity).getSingleResult();
+    }
 }

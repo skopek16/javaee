@@ -1,7 +1,9 @@
 package pl.bskop.javaee.projekt.rest;
 
 import pl.bskop.javaee.projekt.domain.Conditioner;
+import pl.bskop.javaee.projekt.domain.Producer;
 import pl.bskop.javaee.projekt.service.ConditionerManager;
+import pl.bskop.javaee.projekt.service.ProducerManager;
 
 import javax.inject.Inject;
 import javax.ws.rs.*;
@@ -14,6 +16,8 @@ public class ConditionerRestService {
 
     @Inject
     ConditionerManager conditionerManager;
+    @Inject
+    ProducerManager producerManager;
 
     @GET
     @Path("/")
@@ -29,7 +33,12 @@ public class ConditionerRestService {
     public Conditioner getConditioner(@PathParam("conditionerId") long id) {
         return conditionerManager.getConditioner(id);
     }
-
+    @GET
+    @Path("/{capacity}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Conditioner getConditionerByProducer(@PathParam("capacity") double  capacity) {
+        return conditionerManager.getConditionerByCapacity(capacity);
+    }
     @POST
     @Path("/")
     @Consumes(MediaType.APPLICATION_JSON)

@@ -10,6 +10,7 @@ import java.util.Date;
 @NamedQueries({
         @NamedQuery(name = "conditioner.getAll", query = "Select c from Conditioner c"),
         @NamedQuery(name = "conditioner.deleteAll", query = "Delete  from Conditioner"),
+        @NamedQuery(name = "conditioner.byCapacity", query = "Select c from Conditioner c where c.capacity = :capacity"),
 })
 public class Conditioner {
 
