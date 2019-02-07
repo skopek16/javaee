@@ -11,6 +11,8 @@ import java.util.Date;
         @NamedQuery(name = "conditioner.getAll", query = "Select c from Conditioner c"),
         @NamedQuery(name = "conditioner.deleteAll", query = "Delete  from Conditioner"),
         @NamedQuery(name = "conditioner.byCapacity", query = "Select c from Conditioner c where c.capacity = :capacity"),
+        @NamedQuery(name = "conditioner.byModelName", query = "SELECT c FROM Conditioner c JOIN c.model m WHERE m.name = :name"),
+
 })
 public class Conditioner {
 

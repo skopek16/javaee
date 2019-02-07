@@ -33,6 +33,14 @@ public class ConditionerRestService {
     public Conditioner getConditioner(@PathParam("conditionerId") long id) {
         return conditionerManager.getConditioner(id);
     }
+
+    @GET
+    @Path("/model/{modelName}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Conditioner getConditioner(@PathParam("modelName") String modelName) {
+        return conditionerManager.getConditionerByModelName(modelName);
+    }
+
     @GET
     @Path("/{capacity}")
     @Produces(MediaType.APPLICATION_JSON)

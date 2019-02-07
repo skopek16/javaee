@@ -55,7 +55,7 @@ public class ModelRestService {
     @DELETE
     @Path("/{modelId}")
     @Produces(MediaType.APPLICATION_JSON)
-    public Response deleteConditioner(@PathParam("modelId") int id) {
+    public Response deleteModel(@PathParam("modelId") int id) {
         modelManager.deleteModel(id);
         return Response.status(Response.Status.OK).build();
     }

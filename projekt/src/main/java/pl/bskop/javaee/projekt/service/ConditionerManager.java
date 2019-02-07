@@ -41,4 +41,7 @@ public class ConditionerManager {
     public List<Conditioner> getConditionerByCapacity(double capacity){
         return entityManager.createNamedQuery("conditioner.byCapacity").setParameter("capacity", capacity).getResultList();
     }
+    public Conditioner getConditionerByModelName(String modelName){
+        return  (Conditioner) entityManager.createNamedQuery("conditioner.byModelName").setParameter("modelName",modelName).getSingleResult();
+    }
 }
