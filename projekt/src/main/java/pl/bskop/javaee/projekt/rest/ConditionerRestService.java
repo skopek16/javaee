@@ -36,7 +36,7 @@ public class ConditionerRestService {
     @GET
     @Path("/{capacity}")
     @Produces(MediaType.APPLICATION_JSON)
-    public List<Conditioner> getConditionerByProducer(@PathParam("capacity") double  capacity) {
+    public List<Conditioner> getConditionerByCapacity(@PathParam("capacity") double  capacity) {
         return conditionerManager.getConditionerByCapacity(capacity);
     }
     @POST
@@ -54,7 +54,7 @@ public class ConditionerRestService {
     public Response updateConditioner(@PathParam("conditionerId") long id, Conditioner transientConditioner) {
         Conditioner conditioner = conditionerManager.getConditioner(id);
 
-        conditioner.setModel(transientConditioner.getModel());
+
         conditioner.setProduceDate(transientConditioner.getProduceDate());
         conditioner.setCapacity(transientConditioner.getCapacity());
         conditioner.setFans(transientConditioner.getFans());

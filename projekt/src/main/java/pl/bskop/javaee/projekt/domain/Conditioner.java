@@ -15,15 +15,15 @@ import java.util.Date;
 public class Conditioner {
 
     private long id;
-    private String model;
+    private Model model;
     private Date produceDate;
     private double capacity;
     private int fans;
 
     private Producer producer;
 
-    public Conditioner(String model, Date produceDate, double capacity, int fans) {
-        this.model = model;
+    public Conditioner( Date produceDate, double capacity, int fans) {
+
         this.produceDate = produceDate;
         this.capacity = capacity;
         this.fans = fans;
@@ -42,13 +42,7 @@ public class Conditioner {
         this.id = id;
     }
 
-    public String getModel() {
-        return model;
-    }
 
-    public void setModel(String model) {
-        this.model = model;
-    }
 
     @Temporal(TemporalType.DATE)
     public Date getProduceDate() {
@@ -82,5 +76,14 @@ public class Conditioner {
 
     public void setProducer(Producer producer) {
         this.producer = producer;
+    }
+
+    @OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    public Model getModel() {
+        return model;
+    }
+
+    public void setModel(Model model) {
+        this.model = model;
     }
 }
