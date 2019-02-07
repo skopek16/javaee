@@ -1,0 +1,377 @@
+{
+	"info": {
+		"_postman_id": "b292c6ad-ac9a-42ef-b676-32bfa58d33f1",
+		"name": "Projekt javaee",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Conditioner Smoke Test",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/projekt/api/conditioner/test",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"projekt",
+						"api",
+						"conditioner",
+						"test"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Conditioners",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/projekt/api/conditioner",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"projekt",
+						"api",
+						"conditioner"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Conditioner",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/projekt/api/conditioner/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"projekt",
+						"api",
+						"conditioner",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Conditioner",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"model\": \"HRX-1000\",\n\t\"produceDate\": \"2018-01-01\",\n\t\"capacity\": 2.5,\n\t\"fans\": 5\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/projekt/api/conditioner",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"projekt",
+						"api",
+						"conditioner"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Conditioner With Producer",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"model\": \"HRX-1000\",\n\t\"produceDate\": \"2018-01-01\",\n\t\"capacity\": 2.5,\n\t\"fans\": 5,\n\t\"producer\": {\n\t\t\"name\": \"Yamaha\"\n\t}\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/projekt/api/conditioner",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"projekt",
+						"api",
+						"conditioner"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Conditioner",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"model\": \"XX-120\",\n\t\"produceDate\": \"2018-01-01\",\n\t\"capacity\": 5.5,\n\t\"fans\": 15\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/projekt/api/conditioner/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"projekt",
+						"api",
+						"conditioner",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Conditioner",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/projekt/api/conditioner/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"projekt",
+						"api",
+						"conditioner",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Producer Smoke Test",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/projekt/api/producer/test",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"projekt",
+						"api",
+						"producer",
+						"test"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Producers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/projekt/api/producer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"projekt",
+						"api",
+						"producer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Producer",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/projekt/api/producer/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"projekt",
+						"api",
+						"producer",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Producer",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Toyota\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/projekt/api/producer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"projekt",
+						"api",
+						"producer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Producer",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Test\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/projekt/api/producer/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"projekt",
+						"api",
+						"producer",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Producer",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/projekt/api/producer/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"projekt",
+						"api",
+						"producer",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
